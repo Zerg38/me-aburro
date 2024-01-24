@@ -3,5 +3,6 @@
 scene currentScene = MainMenu;
 
 int main(){
-	sceneManager(currentScene);
+	srand(static_cast<unsigned int>(time(0)));
+		sceneManager(currentScene);
 }

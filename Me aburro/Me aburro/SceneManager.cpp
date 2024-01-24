@@ -8,6 +8,7 @@ void sceneManager(scene currentScene) {
 		menu();
 		break;
 	case Dungeon:
+		DungeonPrint();
 		break;
 	case Combat:
 		break;
