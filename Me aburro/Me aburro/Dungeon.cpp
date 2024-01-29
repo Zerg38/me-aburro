@@ -1,6 +1,7 @@
 #include "Dungeon.h"
 
 bool isDungeon = true;
+char decision;
 
 void DungeonPrint()
 {
@@ -30,7 +31,37 @@ void DungeonPrint()
 			}
 			std::cout << "\n";
 		}
+
+		std::cout << "Where do you want to go?" << std::endl;
+		std::cout << "Press W to go up" << std::endl;
+		std::cout << "Press S to go down" << std::endl;
+		std::cout << "Press A to go left" << std::endl;
+		std::cout << "Press D to go right" << std::endl;
+		std::cout << "Please use uppercase inputs" << std::endl;
+		std::cin >> decision;
 		system("cls");
+		switch (decision) {
+		case 'W':
+			if (person.Position[0] != 0) {
+				person.Position[0] = person.Position[0] - 1;
+			}
+			break;
+		case 'A':
+			if (person.Position[1] != 0) {
+				person.Position[1] = person.Position[1] - 1;
+			}
+			break;
+		case 'S':
+			if (person.Position[0] != 4) {
+				person.Position[0] = person.Position[0] + 1;
+			}
+			break;
+		case 'D':
+			if (person.Position[1] != 4) {
+				person.Position[1] = person.Position[1] + 1;
+			}
+			break;
+		}
 	}
 
 }

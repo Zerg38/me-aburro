@@ -50,3 +50,4 @@ bool checkName(std::string opinion) {
     person.name = opinion;
     return true;
 }
+
