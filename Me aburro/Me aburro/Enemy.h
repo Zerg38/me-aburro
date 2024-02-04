@@ -1,4 +1,6 @@
 #pragma once
+#include<iostream>
+#include<random>
 
 struct Enemy {
 
@@ -11,3 +13,4 @@ struct Enemy {
 };
 
 extern Enemy enemy;
+

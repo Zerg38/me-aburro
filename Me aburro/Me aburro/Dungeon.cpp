@@ -1,10 +1,12 @@
 #include "Dungeon.h"
+#include "Enemy.h"
 
 bool isDungeon = true;
 char decision;
 
 void DungeonPrint()
 {
+	std::cout << "-------DUNGEON---------" << std::endl;
 	while (isDungeon) {
 		for (int i = 0; i < 5; i++) {
 			std::cout << " ___ ";
@@ -21,6 +23,9 @@ void DungeonPrint()
 				char value = ' ';
 				if (person.Position[0] == i && person.Position[1] == j) {
 					value = 'P';
+				}
+				if (enemy.position[i] == rand() % 3 && enemy.position[j] == rand() % 3) {
+					value = 'E';
 				}
 				std::cout << "| " << value << " |";
 			}

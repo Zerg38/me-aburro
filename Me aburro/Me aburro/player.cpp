@@ -7,12 +7,12 @@ void initializePlayer() {
     person.gender = ' ';
     person.age = 0;
     person.name = "";
-    person.Position[0] = rand() % 2;
-    person.Position[1] = rand() % 2;
+    person.Position[0] = rand() % 5;
+    person.Position[1] = rand() % 5;
     person.gold = 0;
-    person.healht = rand() % 91 + 110;
+    person.healht = rand() % 21 + 90;
     person.maxHealth = person.healht;
-    person.stamina = rand() % 91 + 110;
+    person.stamina = rand() % 21 + 90;
     person.maxstamina = person.stamina;
     person.agility = 3;
     person.maxagility = person.agility;

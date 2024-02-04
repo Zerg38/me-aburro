@@ -1,4 +1,5 @@
 #include "SceneManager.h"
+#include "Enemy.h"
 
 
 
@@ -11,6 +12,8 @@ void sceneManager(scene currentScene) {
 		DungeonPrint();
 		break;
 	case Combat:
+		break;
+	case Chest:
 		break;
 	default:
 		break;
