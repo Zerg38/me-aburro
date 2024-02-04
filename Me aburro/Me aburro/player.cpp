@@ -7,8 +7,17 @@ void initializePlayer() {
     person.gender = ' ';
     person.age = 0;
     person.name = "";
-    person.Position[0] = rand() % 5;
-    person.Position[1] = rand() % 5;
+    person.Position[0] = rand() % 2;
+    person.Position[1] = rand() % 2;
+    person.gold = 0;
+    person.healht = rand() % 91 + 110;
+    person.maxHealth = person.healht;
+    person.stamina = rand() % 91 + 110;
+    person.maxstamina = person.stamina;
+    person.agility = 3;
+    person.maxagility = person.agility;
+    person.potions = 0;
+    person.maxpotions = person.potions;
 }
 
 
@@ -18,6 +27,9 @@ void displayPlayerData() {
     std::cout << "Gender: " << person.gender << std::endl;
     std::cout << "Age: " << person.age << std::endl;
     std::cout << "Name: " << person.name << std::endl;
+    std::cout << "Health: " << person.healht << " / " << person.maxHealth << std::endl;
+    std::cout << "Potions: " << person.potions << " / " << person.maxpotions << std::endl;
+    std::cout << "Moves: " << person.agility << " / " << person.maxagility << std::endl;
 }
 
 bool checkGender(std::string opinion)

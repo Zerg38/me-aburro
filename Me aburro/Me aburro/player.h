@@ -7,6 +7,15 @@ struct Player {
 	int age;
 	std::string name;
 	int Position[2];
+	int gold;
+	int healht;
+	int maxHealth;
+	int stamina;
+	int maxstamina;
+	int agility;
+	int maxagility;
+	int potions;
+	int maxpotions;
 };
 
 extern Player person;
