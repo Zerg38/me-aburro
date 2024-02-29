@@ -4,6 +4,7 @@
 bool isDungeon = true;
 char decision;
 
+
 void DungeonPrint()
 {
 	std::cout << "-------DUNGEON---------" << std::endl;
@@ -24,7 +25,7 @@ void DungeonPrint()
 				if (person.Position[0] == i && person.Position[1] == j) {
 					value = 'P';
 				}
-				if (enemy.position[i] == rand() % 3 && enemy.position[j] == rand() % 3) {
+				if (enemy.position[i] ==  rand() % 7 + 1 && enemy.position[j] == rand() % 7 + 1) {
 					value = 'E';
 				}
 				std::cout << "| " << value << " |";
