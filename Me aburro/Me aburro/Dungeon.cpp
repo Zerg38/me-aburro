@@ -25,7 +25,7 @@ void DungeonPrint()
 				if (person.Position[0] == i && person.Position[1] == j) {
 					value = 'P';
 				}
-				if (enemy.position[i] ==  rand() % 7 + 1 && enemy.position[j] == rand() % 7 + 1) {
+				if (enemy.position[0] == i && enemy.position[1] == j) {
 					value = 'E';
 				}
 				std::cout << "| " << value << " |";
