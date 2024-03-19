@@ -14,3 +14,4 @@ struct Enemy {
 
 extern Enemy enemy;
 
+extern Enemy enemy1;

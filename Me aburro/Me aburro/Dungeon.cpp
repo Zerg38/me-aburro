@@ -28,6 +28,9 @@ void DungeonPrint()
 				if (enemy.position[0] == i && enemy.position[1] == j) {
 					value = 'E';
 				}
+				if (enemy1) {
+
+				}
 				std::cout << "| " << value << " |";
 			}
 			std::cout << "\n";
