@@ -1,4 +1,6 @@
 #include "Menu.h"
+#include"Enemy.h"
+#include"Chest.h"
 
 
 void menu()
@@ -36,8 +38,11 @@ void menu()
 	system("cls");
 	displayPlayerData();
 	system("pause");
-	enemy.position[0] = rand() % 5;
-	enemy.position[1] = rand() % 5;
+	Initialize();
+	Initialize1();
+	Initialize2();
+	InitializeChest();
+	InitializeChest1();
 	scene currentScene = Dungeon;
 	sceneManager(currentScene);
 }

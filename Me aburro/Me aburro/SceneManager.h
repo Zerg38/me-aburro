@@ -8,7 +8,7 @@ enum scene {
 	MainMenu,
 	Dungeon,
 	Combat,
-	Chest
+	OpenChest,
 };
 
 void sceneManager(scene currentScene);

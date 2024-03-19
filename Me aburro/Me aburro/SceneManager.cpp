@@ -1,5 +1,6 @@
 #include "SceneManager.h"
 #include "Enemy.h"
+#include "Chest.h"
 
 
 
@@ -13,7 +14,8 @@ void sceneManager(scene currentScene) {
 		break;
 	case Combat:
 		break;
-	case Chest:
+	case OpenChest:
+		InitializeChest();
 		break;
 	default:
 		break;

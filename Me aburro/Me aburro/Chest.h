@@ -1,12 +1,24 @@
 #pragma once
 #include<string>
+#include<iostream>
 
 struct Chest {
-	std::string chestName;
+	std::string chestName[10];
+	int randomNumber;
 	int position[2];
 	int gold;
-	bool isLooted;
-	bool ContainsPotion;
-	// lo de gear que no se que cojones de variable es
-	
+	bool isLooted = false;
+	bool ContainsPotion = false;
 };
+
+
+extern Chest chest;
+
+extern Chest chest1;
+
+
+void InitializeChest();
+
+void InitializeChest1();
+
+void PrintChest();

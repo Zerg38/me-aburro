@@ -1,6 +1,6 @@
 #include "Dungeon.h"
 #include "Enemy.h"
-
+#include "Chest.h"
 bool isDungeon = true;
 char decision;
 
@@ -26,10 +26,20 @@ void DungeonPrint()
 					value = 'P';
 				}
 				if (enemy.position[0] == i && enemy.position[1] == j) {
+						value = 'E';
+				}
+				if (enemy1.position[0] == i && enemy1.position[1] == j) {
 					value = 'E';
 				}
-				if (enemy1) {
-
+				if (enemy2.position[0] == i && enemy2.position[1] == j) {
+					
+					value = 'E';
+				}
+				if (chest.position[0] == i && chest.position[1] == j) {
+					value = 'C';
+				}
+				if (chest1.position[0] == i && chest1.position[1] == j) {
+					value = 'C';
 				}
 				std::cout << "| " << value << " |";
 			}
@@ -47,6 +57,13 @@ void DungeonPrint()
 		std::cout << "Press A to go left" << std::endl;
 		std::cout << "Press D to go right" << std::endl;
 		std::cout << "Please use uppercase inputs" << std::endl;
+		if (person.Position[0] == chest.position[0] && person.Position[1] == chest.position[1]) {
+			system("cls");
+			scene currentScene = OpenChest;
+		}
+		std::cout << enemy.position[0] << enemy.position[1] << std::endl;
+		std::cout << enemy1.position[0] << enemy1.position[1] << std::endl;
+		std::cout << enemy2.position[0] << enemy2.position[1] << std::endl;
 		std::cin >> decision;
 		system("cls");
 		switch (decision) {
@@ -72,5 +89,6 @@ void DungeonPrint()
 			break;
 		}
 	}
+	
 
 }
