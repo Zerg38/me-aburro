@@ -18,12 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Menu.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="player.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -36,14 +30,20 @@
     <ClCompile Include="Chest.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="MathFunction.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="MathFunction.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="MainManager.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="MainManager.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SceneManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="player.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -54,6 +54,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Chest.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MapPosition.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,8 @@
 #pragma once
-#include "SceneManager.h"
+#include "MainManager.h"
+#include "MathFunction.h"
+#include <iostream>
 
 
 
-void DungeonPrint();
+void Dungeon(MainManager& manager);

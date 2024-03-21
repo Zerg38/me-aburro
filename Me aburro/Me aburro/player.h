@@ -3,12 +3,9 @@
 #include <string>
 
 struct Player {
-	char gender;
-	int age;
-	std::string name;
 	int Position[2];
 	int gold;
-	int healht;
+	int health;
 	int maxHealth;
 	int stamina;
 	int maxstamina;
@@ -16,12 +13,9 @@ struct Player {
 	int maxagility;
 	int potions;
 	int maxpotions;
+	void initialize();
 };
 
 extern Player person;
 
-void initializePlayer();
-void displayPlayerData();
-bool checkGender(std::string opinion);
-bool checkAge(std::string opinion);
-bool checkName(std::string opinion);
+

@@ -131,17 +131,18 @@
     <ClCompile Include="Dungeon.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MainManager.cpp" />
+    <ClCompile Include="MainManager.h" />
+    <ClCompile Include="MathFunction.cpp" />
+    <ClCompile Include="MathFunction.h" />
     <ClCompile Include="player.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chest.h" />
     <ClInclude Include="Dungeon.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MapPosition.h" />
     <ClInclude Include="player.h" />
-    <ClInclude Include="SceneManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
