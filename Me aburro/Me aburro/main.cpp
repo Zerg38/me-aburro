@@ -11,8 +11,8 @@ int main() {
 	srand(time(NULL));
 	MainManager manager;
 	manager.Initialize();
-	system("pause");
-	system("cls");
+	//system("pause");
+	//system("cls");
 	while (true) {
 
 		switch (manager.curentScene) {
@@ -42,7 +42,7 @@ int main() {
 		default:
 			break;
 		}
-		system("pause");
+		//system("pause");
 		system("cls");
 	}
 

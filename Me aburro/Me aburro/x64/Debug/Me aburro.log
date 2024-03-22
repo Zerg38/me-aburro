@@ -1,2 +1,3 @@
-﻿  MainManager.cpp
-  Me aburro.vcxproj -> C:\Users\mapimar\Documents\GitHub\me-aburro\Me aburro\x64\Debug\Me aburro.exe
+﻿  main.cpp
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\main.cpp(11,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Me aburro.vcxproj -> C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\x64\Debug\Me aburro.exe

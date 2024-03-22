@@ -48,7 +48,7 @@ void Dungeon(MainManager& manager)
 		std::cout << "Please use uppercase letters" << std::endl;
 
 		std::cin >> decision;
-		system("cls");
+		//system("cls");
 
 		switch (decision) {
 		case 'W':
