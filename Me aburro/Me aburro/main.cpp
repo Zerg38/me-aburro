@@ -2,6 +2,7 @@
 #include"MainManager.h"
 #include"MathFunction.h"
 #include"Dungeon.h"
+#include"Combat.h"
 
 #include<iostream>
 
@@ -20,9 +21,9 @@ int main() {
 			Dungeon(manager);
 			break;
 
-		/*case COMBAT:
+		case COMBAT:
 			Combat(manager);
-			break;*/
+			break;
 
 		case GAMEOVER:
 			if (manager.player.health == 0) {

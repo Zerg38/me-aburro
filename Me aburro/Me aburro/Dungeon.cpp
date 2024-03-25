@@ -29,6 +29,7 @@ void Dungeon(MainManager& manager)
 						value = 'E';
 					}
 				}
+				
 
 				std::cout << "| " << value << " |";
 			}
@@ -48,7 +49,7 @@ void Dungeon(MainManager& manager)
 		std::cout << "Please use uppercase letters" << std::endl;
 
 		std::cin >> decision;
-		//system("cls");
+		
 
 		switch (decision) {
 		case 'W':
@@ -72,6 +73,12 @@ void Dungeon(MainManager& manager)
 			}
 			break;
 		}
+		for (int i = 0; i < manager.enemiesAmount; i++) {
+			if (manager.enemies[i]->enemyP.x == person.Position[1] && manager.enemies[i]->enemyP.y == person.Position[0]) {
+				manager.curentScene = COMBAT;
+			}
+		}
+		system("cls");
 	
 
 }
