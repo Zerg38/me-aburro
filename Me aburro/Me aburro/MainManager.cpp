@@ -1,5 +1,4 @@
-#include"MainManager.h"
-#include"MathFunction.h"
+#include "MainManager.h"
 #include<iostream>
 #define MAP_SIZE 5
 
@@ -7,7 +6,7 @@ void MainManager::Initialize() {
 	curentScene = DUNGEON;
 	player.initialize();
 
-	enemiesAmount = GenerateRandomNum(5, 7);
+	enemiesAmount = GenerateRandomNumber(5, 7);
 
 	for (int i = 0; i < enemiesAmount; i++) {
 		Enemy* e = new Enemy;
@@ -15,10 +14,10 @@ void MainManager::Initialize() {
 		bool valid;
 		do {
 			valid = true;
-			e->enemyP.x = GenerateRandomNum(0, MAP_SIZE - 1);
-			e->enemyP.y = GenerateRandomNum(0, MAP_SIZE - 1);
+			e->enemyP.x = GenerateRandomNumber(0, MAP_SIZE - 1);
+			e->enemyP.y = GenerateRandomNumber(0, MAP_SIZE - 1);
 
-			if (e->enemyP.x == player.Position[0] && e->enemyP.y == player.Position[1]) {
+			if (e->enemyP.x == player.Position[1] && e->enemyP.y == player.Position[0]) {
 				valid = false;
 			}
 
@@ -33,5 +32,6 @@ void MainManager::Initialize() {
 		} while (!valid);
 		enemies.push_back(e);
 	}
+
 
 }

@@ -2,14 +2,16 @@
 #include"MathFunction.h"
 
 void Enemy::initialize() {
-	enemyP.x;
-	enemyP.y;
+    // Asigna valores válidos a las coordenadas del enemigo
+    enemyP.x; 
+    enemyP.y;
 
-	isDead = false;
+    isDead = false;
 
-	maxhealth = GenerateRandomNum(60, 90);
-	health = maxhealth;
-	maxstamina = GenerateRandomNum(60, 90);
-	stamina = maxstamina;
-	attackE = 0;
+    // Llama a la función GenerateRandomNumber con los valores adecuados
+    maxhealth = GenerateRandomNumber(60, 90);
+    health = maxhealth;
+    maxstamina = GenerateRandomNumber(60, 90);
+    stamina = maxstamina;
+    attackE = 0;
 }

@@ -1,5 +1,2 @@
-﻿  Dungeon.cpp
-  main.cpp
-C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\main.cpp(12,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  Generando código...
-  Me aburro.vcxproj -> C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\x64\Debug\Me aburro.exe
+﻿  MainManager.cpp
+  Me aburro.vcxproj -> C:\Users\mapimar\Documents\GitHub\me-aburro\Me aburro\x64\Debug\Me aburro.exe

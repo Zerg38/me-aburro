@@ -11,11 +11,7 @@ struct Enemy {
 	int maxstamina;
 	int attackE;
 
-	int chooseCombaAction();
 	void initialize();
 };
 
-extern Enemy enemy;
-
-//Enemigo 1
 
