@@ -13,6 +13,13 @@ void Combat(MainManager& manager) {
 		std::cout << "Slime ----->" << std::endl;
 		std::cout << "HP:" << manager.enemy.maxhealth << " / " << manager.enemy.health << std::endl;
 		std::cout << "Stamina: " << manager.enemy.maxstamina << " / " << manager.enemy.stamina << std::endl;
+		std::cout << "\n\n";
+		std::cout << "--PLAYER--" << std::endl;
+		std::cout << "Unknown ---->" << std::endl;
+		std::cout << "HP:" << person.maxHealth << " / " << person.health << std::endl;
+		std::cout << "Stamina:" << person.maxstamina << " / " << person.stamina << std::endl;
+
+
 		
 
 		/*int printH = Porcentage(p1.health, p1.maxHealth);
