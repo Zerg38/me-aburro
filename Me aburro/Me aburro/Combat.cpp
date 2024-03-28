@@ -1,7 +1,9 @@
-#include"Combat.h"
+#include "Combat.h"
+
 
 
 bool isCombat = true;
+char decision;
 void Combat(MainManager& manager) {
 	manager.enemy.initialize();
 	while (isCombat) {
@@ -13,66 +15,50 @@ void Combat(MainManager& manager) {
 		std::cout << "Slime ----->" << std::endl;
 		std::cout << "HP:" << manager.enemy.maxhealth << " / " << manager.enemy.health << std::endl;
 		std::cout << "Stamina: " << manager.enemy.maxstamina << " / " << manager.enemy.stamina << std::endl;
-		std::cout << "\n\n";
+		std::cout << "\n";
+		std::cout << "--------------------\n" << std::endl;
 		std::cout << "--PLAYER--" << std::endl;
 		std::cout << "Unknown ---->" << std::endl;
 		std::cout << "HP:" << person.maxHealth << " / " << person.health << std::endl;
 		std::cout << "Stamina:" << person.maxstamina << " / " << person.stamina << std::endl;
-
-
-		
-
-		/*int printH = Porcentage(p1.health, p1.maxHealth);
-		int printS = Porcentage(p1.stamina, p1.maxStamina);
-		int printHE = Porcentage(e1.health, e1.maxHealth);
-		int printSE = Porcentage(e1.stamina, e1.maxStamina);
-		std::cout << "------COMBAT------\n" << std::endl;
-		std::cout << "--ENEMY--" << std::endl;
-		std::cout << "[";
-		for (int i = 0; i < printHE; i++) {
-			std::cout << "=";
-		}
-	int blankHE = 10 - printHE;
-	for (int i = 0; i < blankHE; i++) {
-		std::cout << " ";
-	}
-	std::cout << "] " << e1.health << " / " << e1.maxHealth << " HP" << std::endl;
-	std::cout << "[";
-		for (int i = 0; i < printSE; i++) {
-			std::cout << "=";
-		}
-		int blankSE = 10 - printSE;
-		for (int i = 0; i < blankSE; i++) {
-			std::cout << " ";
-		}
-		std::cout << "] " << e1.stamina << " / " << e1.maxStamina << " STAMINA\n" << std::endl;
-		std::cout << "[==========] " << e1.health << " / " << e1.maxHealth << " HP" << std::endl;
-		std::cout << "[<<<<<<<<<<] " << e1.stamina << " / " << e1.maxStamina << " STAMINA\n" << std::endl;
-		std::cout << "-------------\n" << std::endl;
-		std::cout << "--Player--" << std::endl;
-		std::cout << "[";
-		for (int i = 0; i < printH; i++) {
-			std::cout << "=";
-		}
-		int blankH = 10 - printH;
-		for (int i = 0; i < blankH; i++) {
-			std::cout << " ";
-		}
-		std::cout << "] " << p1.health << " / " << p1.maxHealth << " HP" << std::endl;
-		std::cout << "[";
-		for (int i = 0; i < printS; i++) {
-			std::cout << ">";
-		}
-		int blankP = 10;
-		for (int i = 0; i < blankP; i++) {
-			std::cout << " ";
-		}
-		std::cout << "] " << p1.stamina << " / " << p1.maxStamina << " STAMINA \n" << std::endl;
-		std::cout << "[==========] " << p1.health << " / " << p1.maxHealth << " HP" << std::endl;
-		std::cout << "[<<<<<<<<<<] " << p1.stamina << " / " << p1.maxStamina << " STAMINA \n" << std::endl;
-		std::cout << "Potions " << p1.potions << " / \n" << p1.maxPotions << std::endl;
-		std::cout << "______________________________________________________\n" << std::endl;
+		std::cout << "Potions: " << person.potions << " / " << person.maxpotions << std::endl;
+		std::cout << "__________________________" << std::endl;
 		std::cout << "A -> Attack" << std::endl;
-		}*/
+		std::cout << "D -> Defend" << std::endl;
+		std::cout << "R -> Rest" << std::endl;
+		std::cout << "P -> Potion\n" << std::endl;
+		std::cout << "Enter your action: ";
+		std::cin >> decision;
+
+		switch (decision) {
+		case 'A':
+			combatCase(manager);
+			break;
+		case 'D':
+			defendCase(manager);
+			break;
+		case 'R':
+			restCase(manager);
+			break;
+		case 'P':
+			potionCase(manager);
+			break;
+		}
 	}
+}
+
+void combatCase(MainManager& manager) {
+
+}
+
+void defendCase(MainManager& manager) {
+
+}
+
+void restCase(MainManager& manager) {
+
+}
+
+void potionCase(MainManager& manager) {
+
 }

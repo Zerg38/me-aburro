@@ -14,6 +14,6 @@ void Player::initialize() {
     person.agility = 3;
     person.maxagility = person.agility;
     person.potions = 0;
-    person.maxpotions = person.potions;
+    person.maxpotions = 3;
 }
 
