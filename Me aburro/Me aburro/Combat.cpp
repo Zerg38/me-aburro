@@ -3,7 +3,9 @@
 
 
 bool isCombat = true;
+bool isValid = false;
 char decision;
+int amount;
 void Combat(MainManager& manager) {
 	manager.enemy.initialize();
 	while (isCombat) {
@@ -48,6 +50,17 @@ void Combat(MainManager& manager) {
 }
 
 void combatCase(MainManager& manager) {
+	std::cout << "Select an amount of stamina --> " << "MAX: " << person.stamina;
+	std::cin >> amount;
+	while (!isValid) {
+		if (amount <= person.stamina) {
+			isValid = true;
+		}
+		else {
+			std::cout << "\nThe selected amount it's not correct, try again --> MAX: " << person.stamina;
+			std::cin >> amount;
+		}
+	}
 
 }
 
