@@ -3,7 +3,7 @@
 
 void Dungeon(MainManager& manager)
 {
-	while (isDungeon) {
+	while (isDungeons) {
 
 
 		std::cout << "-------DUNGEON---------" << std::endl;
@@ -50,10 +50,10 @@ void Dungeon(MainManager& manager)
 		std::cout << "Press D to go right" << std::endl;
 		std::cout << "Please use uppercase letters" << std::endl;
 
-		std::cin >> decision;
+		std::cin >> movements;
 
 
-		switch (decision) {
+		switch (movements) {
 		case 'W':
 			if (person.Position[0] != 0) {
 				person.Position[0] = person.Position[0] - 1;
@@ -83,7 +83,7 @@ void Dungeon(MainManager& manager)
 		system("cls");
 
 		if (person.health <= 0) {
-			isDungeon = false;
+			isDungeons = false;
 		}
 	}
 }

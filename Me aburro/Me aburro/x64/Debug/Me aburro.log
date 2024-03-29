@@ -1,11 +1,6 @@
-﻿main.obj : error LNK2005: ya se definió "char decision" (?decision@@3DA) en Dungeon.obj
-main.obj : error LNK2005: ya se definió "bool isDungeon" (?isDungeon@@3_NA) en Dungeon.obj
-main.obj : error LNK2005: ya se definió "bool isCombat" (?isCombat@@3_NA) en Combat.obj
-main.obj : error LNK2005: ya se definió "bool isValid" (?isValid@@3_NA) en Combat.obj
-main.obj : error LNK2005: ya se definió "bool playerWin" (?playerWin@@3_NA) en Combat.obj
-main.obj : error LNK2005: ya se definió "char movement" (?movement@@3DA) en Combat.obj
-main.obj : error LNK2005: ya se definió "int enemyMovement" (?enemyMovement@@3HA) en Combat.obj
-main.obj : error LNK2005: ya se definió "int amount" (?amount@@3HA) en Combat.obj
+﻿  Combat.cpp
+  Dungeon.cpp
+  Generando código...
 main.obj : error LNK2005: ya se definió "int enemyAmount" (?enemyAmount@@3HA) en Combat.obj
 main.obj : error LNK2005: ya se definió "int health30" (?health30@@3HA) en Combat.obj
 main.obj : error LNK2005: ya se definió "int stamina30" (?stamina30@@3HA) en Combat.obj
@@ -13,4 +8,8 @@ main.obj : error LNK2005: ya se definió "int stamina20" (?stamina20@@3HA) en Co
 main.obj : error LNK2005: ya se definió "int stamina25" (?stamina25@@3HA) en Combat.obj
 x64\Debug\MainManager.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
 x64\Debug\MathFunction.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
-C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\x64\Debug\Me aburro.exe : fatal error LNK1169: se encontraron uno o más símbolos definidos simultáneamente
+Combat.obj : error LNK2019: símbolo externo "int __cdecl GenerateRandomNumber(int,int)" (?GenerateRandomNumber@@YAHHH@Z) sin resolver al que se hace referencia en la función "void __cdecl combatCase(struct MainManager &)" (?combatCase@@YAXAEAUMainManager@@@Z)
+Enemy.obj : error LNK2001: símbolo externo "int __cdecl GenerateRandomNumber(int,int)" (?GenerateRandomNumber@@YAHHH@Z) sin resolver
+Combat.obj : error LNK2019: símbolo externo "int __cdecl ToPrecent(int,int)" (?ToPrecent@@YAHHH@Z) sin resolver al que se hace referencia en la función "void __cdecl Combat(struct MainManager &)" (?Combat@@YAXAEAUMainManager@@@Z)
+main.obj : error LNK2019: símbolo externo "public: void __cdecl MainManager::Initialize(void)" (?Initialize@MainManager@@QEAAXXZ) sin resolver al que se hace referencia en la función main
+C:\Users\mapimar\Documents\GitHub\me-aburro\Me aburro\x64\Debug\Me aburro.exe : fatal error LNK1120: 3 externos sin resolver

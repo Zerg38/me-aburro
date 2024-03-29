@@ -7,5 +7,5 @@
 
 void Dungeon(MainManager& manager);
 
-char decision;
-bool isDungeon = true;
+bool isDungeons = true;
+char movements;

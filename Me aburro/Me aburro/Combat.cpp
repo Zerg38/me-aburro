@@ -4,14 +4,12 @@
 
 void Combat(MainManager& manager) {
 	manager.enemy.initialize();
-	health30 = ToPrecent(manager.enemy.maxhealth, 30);
-	stamina30 = ToPrecent(manager.enemy.maxstamina, 30);
-	stamina20 = ToPrecent(manager.enemy.maxstamina, 20);
-	stamina25 = ToPrecent(manager.enemy.maxstamina, 25);
-
-	while (isCombat) {
+	while (isCombats) {
 		system("cls");
-
+		healthPer30 = ToPrecent(manager.enemy.maxhealth, 30);
+		staminaPer30 = ToPrecent(manager.enemy.maxstamina, 30);
+		staminaPer20 = ToPrecent(manager.enemy.maxstamina, 20);
+		staminaPer25 = ToPrecent(manager.enemy.maxstamina, 25);
 		std::cout << "------COMBAT------\n" << std::endl;
 		std::cout << "--ENEMY--" << std::endl;
 		std::cout << "Slime ----->" << std::endl;
@@ -30,10 +28,11 @@ void Combat(MainManager& manager) {
 		std::cout << "R -> Rest" << std::endl;
 		std::cout << "P -> Potion\n" << std::endl;
 		std::cout << "Enter your action: ";
-		std::cin >> movement;
+		std::cin >> Decision;
 
-		switch (movement) {
+		switch (Decision) {
 		case 'A':
+			validStamina = false;
 			combatCase(manager);
 			break;
 		case 'D':
@@ -49,54 +48,54 @@ void Combat(MainManager& manager) {
 	}
 
 	if (manager.enemy.health <= 0 || person.health <= 0) {
-		isCombat = false;
+		isCombats = false;
 	}
 }
 
 void combatCase(MainManager& manager) {
 	std::cout << "Select an amount of stamina --> " << "MAX: " << person.stamina << std::endl;
-	std::cin >> amount;
-	while (!isValid) {
-		if (amount <= person.stamina) {
-			isValid = true;
+	std::cin >> playerAmount;
+	while (!validStamina) {
+		if (playerAmount <= person.stamina) {
+			validStamina = true;
 		}
 		else {
 			std::cout << "\nThe selected amount it's not correct, try again --> MAX: " << person.stamina << std::endl;
-			std::cin >> amount;
+			std::cin >> playerAmount;
 		}
 	}
-	enemyMovement = EnemyDecision(manager);
-	switch (enemyMovement) {
+	enemyMovements = EnemyDecision(manager);
+	switch (enemyMovements) {
 	case 1: //defend
 		std::cout << "The enemy assumes a defensive posture mitigating part of your damage" << std::endl;
-		std::cout << "You managed to hit the enemy by " << amount / 2 << std::endl;
-		manager.enemy.health -= amount / 2;
-		manager.enemy.stamina += stamina25;
+		std::cout << "You managed to hit the enemy by " << playerAmount / 2 << std::endl;
+		manager.enemy.health -= playerAmount / 2;
+		manager.enemy.stamina += staminaPer25;
 		if (manager.enemy.stamina > manager.enemy.maxstamina) {
 			manager.enemy.stamina = manager.enemy.maxstamina;
 		}
 		break;
 	case 2: //Rest
 		std::cout << "The enemy took the opportunity between your moves to rest a little bit" << std::endl;
-		std::cout << "You managed to hit the enemy by " << amount << std::endl;
-		manager.enemy.health -= amount;
+		std::cout << "You managed to hit the enemy by " << playerAmount << std::endl;
+		manager.enemy.health -= playerAmount;
 		manager.enemy.stamina = manager.enemy.maxstamina;
 		break;
 	case 3: //Attack
-		enemyAmount = GenerateRandomNumber(stamina20, manager.enemy.maxstamina);
-		if (enemyAmount > amount) {
+		enemiesAmount = GenerateRandomNumber(staminaPer20, manager.enemy.maxstamina);
+		if (enemiesAmount > playerAmount) {
 			std::cout << "Unfortunately the enemy manages to hit you first!" << std::endl;
-			std::cout << "You lose a total of " << enemyAmount << " hit points!" << std::endl;
-			manager.enemy.stamina -= enemyAmount;
-			person.health -= enemyAmount;
-			person.stamina -= amount;
+			std::cout << "You lose a total of " << enemiesAmount << " hit points!" << std::endl;
+			manager.enemy.stamina -= enemiesAmount;
+			person.health -= enemiesAmount;
+			person.stamina -= playerAmount;
 		}
 		else {
 			std::cout << "You managed to hit the enemy first!" << std::endl;
-			std::cout << "The enemy lose a total of " << amount << " hit points!" << std::endl;
-			manager.enemy.health -= amount;
-			manager.enemy.stamina -= enemyAmount;
-			person.stamina -= amount;
+			std::cout << "The enemy lose a total of " << playerAmount << " hit points!" << std::endl;
+			manager.enemy.health -= playerAmount;
+			manager.enemy.stamina -= enemiesAmount;
+			person.stamina -= playerAmount;
 		}
 
 
@@ -117,10 +116,10 @@ void potionCase(MainManager& manager) {
 }
 
 int EnemyDecision(MainManager& manager) {
-	if (manager.enemy.health < health30 && manager.enemy.stamina < stamina30) {
+	if (manager.enemy.health < healthPer30 && manager.enemy.stamina < staminaPer30) {
 		return 1; //Defend
 	}
-	else if (manager.enemy.health < stamina20) {
+	else if (manager.enemy.health < staminaPer20) {
 		return 2; //Rest
 	}
 	else {

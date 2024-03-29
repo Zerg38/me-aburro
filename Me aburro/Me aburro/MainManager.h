@@ -14,12 +14,9 @@ struct MainManager {
 	Enemy enemy;
 	Chest chest;
 
-	std::vector<Chest*>chests;
 	std::vector<Enemy*>enemies;
 
 	int enemiesAmount;
-
-	Enemy* combatEnemy;
 
 	int killCount = 0;
 
