@@ -1,4 +1,16 @@
-﻿  Combat.cpp
+﻿main.obj : error LNK2005: ya se definió "char decision" (?decision@@3DA) en Dungeon.obj
+main.obj : error LNK2005: ya se definió "bool isDungeon" (?isDungeon@@3_NA) en Dungeon.obj
+main.obj : error LNK2005: ya se definió "bool isCombat" (?isCombat@@3_NA) en Combat.obj
+main.obj : error LNK2005: ya se definió "bool isValid" (?isValid@@3_NA) en Combat.obj
+main.obj : error LNK2005: ya se definió "bool playerWin" (?playerWin@@3_NA) en Combat.obj
+main.obj : error LNK2005: ya se definió "char movement" (?movement@@3DA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int enemyMovement" (?enemyMovement@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int amount" (?amount@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int enemyAmount" (?enemyAmount@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int health30" (?health30@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int stamina30" (?stamina30@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int stamina20" (?stamina20@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int stamina25" (?stamina25@@3HA) en Combat.obj
 x64\Debug\MainManager.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
 x64\Debug\MathFunction.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
-  Me aburro.vcxproj -> C:\Users\mapimar\Documents\GitHub\me-aburro\Me aburro\x64\Debug\Me aburro.exe
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\x64\Debug\Me aburro.exe : fatal error LNK1169: se encontraron uno o más símbolos definidos simultáneamente

@@ -12,7 +12,6 @@ void Combat(MainManager& manager) {
 	while (isCombat) {
 		system("cls");
 
-		//LAS STATS DE COMBATENEMY ESTAN VACIAS, HABRÍA QUE HACER INITIALIZE ANTES DE TODO
 		std::cout << "------COMBAT------\n" << std::endl;
 		std::cout << "--ENEMY--" << std::endl;
 		std::cout << "Slime ----->" << std::endl;
