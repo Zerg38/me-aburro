@@ -1,10 +1,12 @@
 #include "Dungeon.h"
-char decision;
 
 
 void Dungeon(MainManager& manager)
 {
-	std::cout << "-------DUNGEON---------" << std::endl;
+	while (isDungeon) {
+
+
+		std::cout << "-------DUNGEON---------" << std::endl;
 		for (int i = 0; i < 5; i++) {
 			std::cout << " ___ ";
 		}
@@ -29,7 +31,7 @@ void Dungeon(MainManager& manager)
 						value = 'E';
 					}
 				}
-				
+
 
 				std::cout << "| " << value << " |";
 			}
@@ -49,7 +51,7 @@ void Dungeon(MainManager& manager)
 		std::cout << "Please use uppercase letters" << std::endl;
 
 		std::cin >> decision;
-		
+
 
 		switch (decision) {
 		case 'W':
@@ -79,6 +81,9 @@ void Dungeon(MainManager& manager)
 			}
 		}
 		system("cls");
-	
 
+		if (person.health <= 0) {
+			isDungeon = false;
+		}
+	}
 }

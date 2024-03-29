@@ -1,2 +1,4 @@
 ﻿  Combat.cpp
+x64\Debug\MainManager.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
+x64\Debug\MathFunction.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
   Me aburro.vcxproj -> C:\Users\mapimar\Documents\GitHub\me-aburro\Me aburro\x64\Debug\Me aburro.exe
