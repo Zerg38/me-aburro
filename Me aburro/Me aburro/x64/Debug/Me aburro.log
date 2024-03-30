@@ -1,4 +1,34 @@
-﻿  MainManager.cpp
+﻿  Chest.cpp
+  Combat.cpp
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\Combat.cpp(9,54): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\Combat.cpp(10,56): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\Combat.cpp(11,57): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\Combat.cpp(12,56): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\Combat.cpp(13,52): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+  Dungeon.cpp
+  Enemy.cpp
+  main.cpp
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\main.cpp(12,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  MainManager.cpp
+  MainManager.h
+  MathFunction.cpp
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\Me aburro\MathFunction.cpp(9,14): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  MathFunction.h
+  player.cpp
+  Generando código...
+main.obj : error LNK2005: ya se definió "bool isDungeons" (?isDungeons@@3_NA) en Dungeon.obj
+main.obj : error LNK2005: ya se definió "char movements" (?movements@@3DA) en Dungeon.obj
+main.obj : error LNK2005: ya se definió "bool isCombats" (?isCombats@@3_NA) en Combat.obj
+main.obj : error LNK2005: ya se definió "bool validStamina" (?validStamina@@3_NA) en Combat.obj
+main.obj : error LNK2005: ya se definió "char Decision" (?Decision@@3DA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int enemyMovements" (?enemyMovements@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int playerAmount" (?playerAmount@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int enemiesAmount" (?enemiesAmount@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int healthPer30" (?healthPer30@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int staminaPer30" (?staminaPer30@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int staminaPer20" (?staminaPer20@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int staminaPer25" (?staminaPer25@@3HA) en Combat.obj
+main.obj : error LNK2005: ya se definió "int playerstamina25" (?playerstamina25@@3HA) en Combat.obj
 x64\Debug\MainManager.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
 x64\Debug\MathFunction.obj : warning LNK4042: objeto especificado más de una vez; omitidos los sobrantes
-  Me aburro.vcxproj -> C:\Users\mapimar\Documents\GitHub\me-aburro\Me aburro\x64\Debug\Me aburro.exe
+C:\Users\Usuario\Dropbox\PC\Desktop\me-aburro\Me aburro\x64\Debug\Me aburro.exe : fatal error LNK1169: se encontraron uno o más símbolos definidos simultáneamente

@@ -10,6 +10,8 @@ void Combat(MainManager& manager) {
 		staminaPer30 = (float)manager.enemy.maxstamina / 100 * (float)30;
 		staminaPer20  = (float)manager.enemy.maxstamina / 100 * (float)20;
 		staminaPer25 = (float)manager.enemy.maxstamina / 100 * (float)25;
+		playerstamina25 = (float)person.maxstamina / 100 * (float)25;
+		playerstamina40 = (float)person.maxstamina / 100 * (float)40;
 		std::cout << "------COMBAT------\n" << std::endl;
 		std::cout << "--ENEMY--" << std::endl;
 		std::cout << "Slime ----->" << std::endl;
@@ -97,22 +99,66 @@ void combatCase(MainManager& manager) {
 			manager.enemy.stamina -= enemiesAmount;
 			person.stamina -= playerAmount;
 		}
-
-
 		break;
 	}
 }
 
 void defendCase(MainManager& manager) {
-
+	enemyMovements = EnemyDecision(manager);
+	switch (enemyMovements) {
+	case 1: //defend
+		std::cout << "You and the enemy decide it's a good idea to defend yourselves" << std::endl;
+		manager.enemy.stamina += staminaPer25;
+		person.stamina += playerstamina25;
+		break;
+	case 2: //Rest 
+		std::cout << "You think it's a good idea to take a nap" << std::endl;
+		manager.enemy.stamina = manager.enemy.maxstamina;
+		person.stamina += playerstamina25;
+		break;
+	case 3: //Attack 
+		std::cout << "You the enemy give each other hell" << std::endl;
+		manager.enemy.stamina -= enemiesAmount;
+		manager.player.health -= enemiesAmount / 2;
+		manager.player.stamina += playerstamina25;
+		if (manager.player.stamina > manager.player.maxstamina) {
+			manager.player.stamina = manager.player.maxstamina;
+		}
+		break;
+	}
 }
 
 void restCase(MainManager& manager) {
-
+	switch (enemyMovements)
+	{
+	case 1: //defend
+		std::cout << "The enemy has a shark mentality" << std::endl;
+		manager.enemy.stamina += staminaPer25;
+		manager.player.stamina = manager.player.maxstamina;
+		break;
+	case 2: //Rest
+		std::cout << "You and the enemy take a nap" << std::endl;
+		manager.enemy.stamina = manager.enemy.maxstamina;
+		manager.player.stamina = manager.player.maxstamina;
+		break;
+	case 3: //Attack
+		std::cout << "You and the enemy play a game of Uno" << std::endl;
+		manager.enemy.stamina -= enemiesAmount;
+		manager.player.health -= enemiesAmount;
+		manager.player.stamina = manager.player.maxstamina;
+		break;
+	default:
+		break;
+	}
 }
 
 void potionCase(MainManager& manager) {
-
+	if (manager.player.potions = 0) {
+		std::cout << "You ran out of potions mate" << std::endl;
+	}
+	else {
+		manager.player.health += playerstamina40;
+	}
 }
 
 int EnemyDecision(MainManager& manager) {

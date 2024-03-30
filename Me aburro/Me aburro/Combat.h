@@ -21,3 +21,5 @@ int healthPer30;
 int staminaPer30;
 int staminaPer20;
 int staminaPer25;
+int playerstamina25;
+int playerstamina40;
