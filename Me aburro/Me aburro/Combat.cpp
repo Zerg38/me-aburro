@@ -6,10 +6,10 @@ void Combat(MainManager& manager) {
 	manager.enemy.initialize();
 	while (isCombats) {
 		system("cls");
-		healthPer30 = ToPrecent(manager.enemy.maxhealth, 30);
-		staminaPer30 = ToPrecent(manager.enemy.maxstamina, 30);
-		staminaPer20 = ToPrecent(manager.enemy.maxstamina, 20);
-		staminaPer25 = ToPrecent(manager.enemy.maxstamina, 25);
+		healthPer30 = (float)manager.enemy.maxhealth / 100 * (float)30;
+		staminaPer30 = (float)manager.enemy.maxstamina / 100 * (float)30;
+		staminaPer20  = (float)manager.enemy.maxstamina / 100 * (float)20;
+		staminaPer25 = (float)manager.enemy.maxstamina / 100 * (float)25;
 		std::cout << "------COMBAT------\n" << std::endl;
 		std::cout << "--ENEMY--" << std::endl;
 		std::cout << "Slime ----->" << std::endl;
@@ -82,7 +82,7 @@ void combatCase(MainManager& manager) {
 		manager.enemy.stamina = manager.enemy.maxstamina;
 		break;
 	case 3: //Attack
-		enemiesAmount = GenerateRandomNumber(staminaPer20, manager.enemy.maxstamina);
+		enemiesAmount = staminaPer20 + rand() % ((manager.enemy.maxstamina + 1) - staminaPer20);
 		if (enemiesAmount > playerAmount) {
 			std::cout << "Unfortunately the enemy manages to hit you first!" << std::endl;
 			std::cout << "You lose a total of " << enemiesAmount << " hit points!" << std::endl;

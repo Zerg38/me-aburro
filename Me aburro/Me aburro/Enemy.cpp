@@ -9,9 +9,9 @@ void Enemy::initialize() {
     isDead = false;
 
     // Llama a la función GenerateRandomNumber con los valores adecuados
-    maxhealth = GenerateRandomNumber(60, 90);
+    maxhealth = 60 + rand() % ((90 + 1) - 60);
     health = maxhealth;
-    maxstamina = GenerateRandomNumber(60, 90);
+    maxstamina = 60 + rand() % ((90 + 1) - 60);
     stamina = maxstamina;
     attackE = 0;
 }

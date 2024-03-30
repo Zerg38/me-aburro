@@ -1,6 +1,6 @@
 #include"MathFunction.h"
 
-int GenerateRandomNumber(int min, int max) {
+int GenerateRandomNum(int min, int max) {
 	int result = min + rand() % ((max + 1) - min);
 	return result;
 }

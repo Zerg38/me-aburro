@@ -6,7 +6,7 @@ void MainManager::Initialize() {
 	curentScene = DUNGEON;
 	player.initialize();
 
-	enemiesAmount = GenerateRandomNumber(5, 7);
+	enemiesAmount = 5 + rand() % ((7 + 1) - 5);
 
 	for (int i = 0; i < enemiesAmount; i++) {
 		Enemy* e = new Enemy;
@@ -14,8 +14,8 @@ void MainManager::Initialize() {
 		bool valid;
 		do {
 			valid = true;
-			e->enemyP.x = GenerateRandomNumber(0, MAP_SIZE - 1);
-			e->enemyP.y = GenerateRandomNumber(0, MAP_SIZE - 1);
+			e->enemyP.x = 0 + rand() % (((MAP_SIZE - 1) + 1) - 0);
+			e->enemyP.y = 0 + rand() % (((MAP_SIZE - 1) + 1) - 0);
 
 			if (e->enemyP.x == player.Position[1] && e->enemyP.y == player.Position[0]) {
 				valid = false;
